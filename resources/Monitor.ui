@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>pySerialMonitor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(23, 31, 50);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPlainTextEdit" name="plainTextEdit">
+      <property name="styleSheet">
+       <string notr="true">color:rgb(110,209,255);
+background-color: rgb(0, 0, 21);
+font: 14pt &quot;Fixed [Misc]&quot;;</string>
+      </property>
+      <property name="tabChangesFocus">
+       <bool>true</bool>
+      </property>
+      <property name="documentTitle">
+       <string/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="plainText">
+       <string>Welcome to SerialMonitorG 1.0 (SMG_1.0)
+</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="3">
+         <widget class="QLabel" name="Parity_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 191, 12);
+font: 63 14pt &quot;LMRomanDemi10&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Parity</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="rtscts_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 191, 12);
+font: 63 14pt &quot;LMRomanDemi10&quot;;</string>
+          </property>
+          <property name="text">
+           <string>RTSCTS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QComboBox" name="SelectStopbits">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(207, 33, 255);
+font: 63 12pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>ONE</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ONE POINT FIVE</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TWO</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QDoubleSpinBox" name="SelectTimeout">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(27, 28, 45);
+color: rgb(207, 33, 255);
+font: 63 12pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+          <property name="decimals">
+           <number>3</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="EnRTSCTS">
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(207, 33, 255);
+font: 63 12pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+          <property name="text">
+           <string>Enable</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QComboBox" name="SelectParity">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(207, 33, 255);
+font: 63 12pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+          <property name="editable">
+           <bool>false</bool>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>None</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Even</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Mark</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Names</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ODD</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Space</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="SelectBITS">
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(207, 33, 255);
+font: 63 12pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+          <property name="currentText">
+           <string>EIGHTBITS</string>
+          </property>
+          <property name="currentIndex">
+           <number>3</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>FIVEBITS</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>SIXBITS</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>SEVENBITS</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>EIGHTBITS</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="Stopbits_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 191, 12);
+font: 63 14pt &quot;LMRomanDemi10&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Stop bits</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="SelectPort">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(207, 33, 255);
+font: 63 12pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="Baudrate_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 191, 12);
+font: 63 14pt &quot;LMRomanDemi10&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Baudrate</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLabel" name="xonxoff_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 191, 12);
+font: 63 14pt &quot;LMRomanDemi10&quot;;</string>
+          </property>
+          <property name="text">
+           <string>xonxoff</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QSpinBox" name="SelectBaudrate">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(27, 28, 45);
+color: rgb(207, 33, 255);
+font: 63 12pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+          <property name="maximum">
+           <number>1000000</number>
+          </property>
+          <property name="value">
+           <number>9600</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QCheckBox" name="EnDSRDTR">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(207, 33, 255);
+font: 63 12pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+          <property name="text">
+           <string>Enable</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="BITS_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 191, 12);
+font: 63 14pt &quot;LMRomanDemi10&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Select bits</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QCheckBox" name="EnXonXoff">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(207, 33, 255);
+font: 63 12pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+          <property name="text">
+           <string>Enable</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="Puerto_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 191, 12);
+font: 63 14pt &quot;LMRomanDemi10&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Select Port</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="Timeout_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 191, 12);
+font: 63 14pt &quot;LMRomanDemi10&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Time out</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="DSRDTR_label">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 191, 12);
+font: 63 14pt &quot;LMRomanDemi10&quot;;</string>
+          </property>
+          <property name="text">
+           <string>DSRDTR</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QPushButton" name="Start_Stop">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 90, 25);
+font: 63 16pt &quot;LMRomanDemi10&quot;</string>
+          </property>
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
