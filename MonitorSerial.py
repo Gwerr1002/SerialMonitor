@@ -11,6 +11,7 @@ from threading import Thread
 from resources.Monitor import Ui_MainWindow, QtWidgets, QtCore, list_ports
 from time import sleep
 
+#semafores para el control de hilos 
 
 class receptor(QtCore.QObject):
     messageChanged=QtCore.pyqtSignal(str)
@@ -127,6 +128,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.port = serial.Serial(self.ui.ports[self.ui.SelectPort.currentText()])
         self.port.apply_settings(self.SETTINGS)
+        self.ui.Start_Stop.clicked.disconnect()
         self.ui.Start_Stop.clicked.connect(self.stop)
         self.ui.Start_Stop.setText(self._translate("MainWindow", "Stop"))
         self.ui.plainTextEdit.clear()
@@ -143,6 +145,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.Start_Stop.setText(self._translate("MainWindow", "Start"))
         self.updatePorts()
         self.port.close()
+        self.ui.Start_Stop.clicked.disconnect()
         self.ui.Start_Stop.clicked.connect(self.init)
         self.ui.plainTextEdit.clear()
 
